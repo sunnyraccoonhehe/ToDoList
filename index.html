@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeManager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="left-panel">
+        <div class="clock-card">
+            <div class="clock-header">
+                <i class="fas fa-clock"></i>
+                <span>Current Time</span>
+            </div>
+            <div class="clock-content">
+                <div class="clock-time" id="clock-time">--:--:--</div>
+                <div class="clock-date" id="clock-date">Loading...</div>
+                <div class="clock-day" id="clock-day">---</div>
+                <div class="clock-timezone" id="clock-timezone">Auto Detect</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="center-panel">
+        <div class="todo-app">
+            <h1>To-Do List</h1>
+            <div class="stat-container">
+                <div class="text-and-progress">
+                    <h3>You Can Do It ))</h3>
+                    <div id="progressbar">
+                        <div id="progress"></div>
+                    </div>
+                </div>
+                <div class="stats-number">
+                    <p id="numbers">0 / 0</p>
+                </div>
+            </div>
+            
+            <form class="input-area">
+                <input type="text" id="task-input" placeholder="Add a new task...">
+                <button type="submit" id="add-task-btn"><i class="fa-solid fa-plus"></i></button>
+            </form>
+            
+            <div class="todos-container">
+                <div class="todos-scroll-wrapper">
+                    <ul id="task-list"></ul>
+                </div>
+                <img class="empty-image" src="photoes/—Pngtree—white cloud hd transparent png_3595697.png" alt="empty">
+            </div> 
+            <button id="save-progress-btn" class="save-progress-btn">
+                <i class="fa-solid fa-floppy-disk"></i> Save Today's Progress
+            </button>
+        </div>
+        
+        <img class="nado" src="photoes/—Pngtree—cloud weather climate free season_8186755.png" alt="Cloud Background">
+    </div>
+    
+    <div class="right-panel">
+        <div class="calendar-card">
+            <div class="calendar-header">
+                <div class="calendar-header-left">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Monthly Calendar</span>
+                </div>
+                <button id="clear-calendar-icon" class="clear-calendar-icon" title="Clear calendar data">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            </div>
+            
+            <div class="calendar-section">
+                <div class="mini-calendar-header">
+                    <button class="calendar-nav" id="prev-month"><i class="fas fa-chevron-left"></i></button>
+                    <div class="calendar-month" id="current-month">Loading...</div>
+                    <button class="calendar-nav" id="next-month"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="mini-calendar" id="mini-calendar"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</html>
